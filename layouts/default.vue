@@ -8,7 +8,9 @@
         <NuxtLink to="/activities">Our Activities</NuxtLink>
         <NuxtLink to="/about">About Us</NuxtLink>
       </div>
-      <NuxtLink to="/contact">Contact Us</NuxtLink>
+      <div class="first">
+        <NuxtLink to="/contact">Contact Us</NuxtLink>
+      </div>
     </nav>
   </header>
 </template>
@@ -31,7 +33,11 @@ nav a {
   margin-right: 20px;
 }
 
-.middle {
+.first {
+  margin-left: 7%;
+}
+
+nav .middle {
   display: flex;
   justify-content: center;
   flex: 2;

@@ -87,7 +87,7 @@
   margin: 100px;
   margin-top: 50px;
   margin-right: 0px;
-  margin-bottom: 50px;
+  margin-bottom: 30px;
   padding: 25px;
   min-height: 500px;
 }
