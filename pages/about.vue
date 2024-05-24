@@ -5,7 +5,7 @@
     <div>
       <img id="image" src="~assets/img/groupImage.png" />
     </div>
-    <div><button class="purpleButton">Our Team</button></div>
+    <div><NuxtLink to="/team" class="purpleButton">Our Team</NuxtLink></div>
   </div>
   <div class="infobox">
     Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
@@ -53,6 +53,7 @@
   padding-left: 30px;
   padding-right: 30px;
   border: none;
+  text-decoration: none;
 }
 
 .purpleButton:hover {

@@ -6,9 +6,10 @@
       <NuxtLink to="/">EmpowerHer Center</NuxtLink>
       <div class="middle">
         <NuxtLink to="/activities">Our Activities</NuxtLink>
+        <NuxtLink to="/team">Our Team</NuxtLink>
         <NuxtLink to="/about">About Us</NuxtLink>
       </div>
-      <div class="first">
+      <div class="last">
         <NuxtLink to="/contact">Contact Us</NuxtLink>
       </div>
     </nav>
@@ -33,8 +34,8 @@ nav a {
   margin-right: 20px;
 }
 
-.first {
-  margin-left: 7%;
+.last {
+  margin-left: 8%;
 }
 
 nav .middle {
