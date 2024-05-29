@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { data } = await useFetch('/api/hello')
+</script>
 
 <template>
   <div class="title">Our Activities</div>
@@ -12,6 +14,7 @@
           <NuxtLink to="/project">Project</NuxtLink>
           <NuxtLink to="/project">Project</NuxtLink>
           <NuxtLink to="/project">Project</NuxtLink>
+          <pre>{{ data }}</pre>
         </div>
       </div>
     </div>

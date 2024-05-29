@@ -10,5 +10,8 @@ export default defineNuxtConfig({
   modules: ['@pinia/nuxt'],
   pinia: {
     autoImports: ['defineStore']
+  },
+  hub: {
+    database: true
   }
 })
