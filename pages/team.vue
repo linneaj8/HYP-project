@@ -5,7 +5,7 @@ const { data: people } = await useFetch('/api/people')
 <template>
   <div>Our Team</div>
 
-  <div v-for="person in people">{{ person }}</div>
+  <NuxtLink v-for="person in people" :to="'/person/'+person.id">{{ person }}</NuxtLink>
 </template>
 
 <style scoped></style>
