@@ -25,7 +25,7 @@ export const services = sqliteTable('services', {
     createdAt: integer('created_at', { mode: 'timestamp' }).notNull()
 })
 
-export const persons = sqliteTable('persons', {
+export const people = sqliteTable('people', {
     id: integer('id').primaryKey({ autoIncrement: true }),
     name: text('fullname').notNull(),
     role: text('role').notNull(),

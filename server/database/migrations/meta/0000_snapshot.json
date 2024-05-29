@@ -1,7 +1,7 @@
 {
   "version": "6",
   "dialect": "sqlite",
-  "id": "89d1276d-9590-4b15-af8a-be7cf017d7e2",
+  "id": "9212439d-286a-4b55-a734-ef6fc29106d5",
   "prevId": "00000000-0000-0000-0000-000000000000",
   "tables": {
     "comments": {
@@ -113,8 +113,8 @@
       "compositePrimaryKeys": {},
       "uniqueConstraints": {}
     },
-    "persons": {
-      "name": "persons",
+    "people": {
+      "name": "people",
       "columns": {
         "id": {
           "name": "id",
@@ -182,9 +182,9 @@
       },
       "indexes": {},
       "foreignKeys": {
-        "persons_projectID_projects_id_fk": {
-          "name": "persons_projectID_projects_id_fk",
-          "tableFrom": "persons",
+        "people_projectID_projects_id_fk": {
+          "name": "people_projectID_projects_id_fk",
+          "tableFrom": "people",
           "tableTo": "projects",
           "columnsFrom": [
             "projectID"
@@ -195,9 +195,9 @@
           "onDelete": "no action",
           "onUpdate": "no action"
         },
-        "persons_serviceID_services_id_fk": {
-          "name": "persons_serviceID_services_id_fk",
-          "tableFrom": "persons",
+        "people_serviceID_services_id_fk": {
+          "name": "people_serviceID_services_id_fk",
+          "tableFrom": "people",
           "tableTo": "services",
           "columnsFrom": [
             "serviceID"

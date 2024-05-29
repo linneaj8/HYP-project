@@ -11,4 +11,4 @@ export function useDrizzle() {
   return drizzle(createClient({ url: drizzleConf.default.dbCredentials.url}), { schema })
 }
 
-export type activity = typeof schema.activities.$inferSelect
+// export type activity = typeof schema.activities.$inferSelect

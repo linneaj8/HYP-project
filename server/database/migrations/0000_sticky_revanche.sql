@@ -16,7 +16,7 @@ CREATE TABLE `contacts` (
 	`created_at` integer NOT NULL
 );
 --> statement-breakpoint
-CREATE TABLE `persons` (
+CREATE TABLE `people` (
 	`id` integer PRIMARY KEY AUTOINCREMENT NOT NULL,
 	`fullname` text NOT NULL,
 	`role` text NOT NULL,

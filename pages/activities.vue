@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { data } = await useFetch('/api/hello')
+const { data: projects } = await useFetch('/api/projects')
+const { data: services } = await useFetch('/api/services')
 </script>
 
 <template>
@@ -9,12 +10,7 @@ const { data } = await useFetch('/api/hello')
       <div class="container">
         <NuxtLink to="/project">Projects</NuxtLink>
         <div class="links">
-          <NuxtLink to="/project">Project</NuxtLink>
-          <NuxtLink to="/project">Project</NuxtLink>
-          <NuxtLink to="/project">Project</NuxtLink>
-          <NuxtLink to="/project">Project</NuxtLink>
-          <NuxtLink to="/project">Project</NuxtLink>
-          <pre v-for="d in data">{{ d }}</pre>
+          <NuxtLink v-for="project in projects" :to="'/project/'+project.id">{{ project }}</NuxtLink>
         </div>
       </div>
     </div>
@@ -22,11 +18,7 @@ const { data } = await useFetch('/api/hello')
       <div class="container">
         <NuxtLink to="/service">Services</NuxtLink>
         <div class="links">
-          <NuxtLink to="/service">Service</NuxtLink>
-          <NuxtLink to="/service">Service</NuxtLink>
-          <NuxtLink to="/service">Service</NuxtLink>
-          <NuxtLink to="/service">Service</NuxtLink>
-          <NuxtLink to="/service">Service</NuxtLink>
+          <NuxtLink v-for="service in services" :to="'/service/'+service.id">{{ service }}</NuxtLink>
         </div>
       </div>
     </div>
