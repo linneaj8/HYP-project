@@ -14,7 +14,7 @@ const { data } = await useFetch('/api/hello')
           <NuxtLink to="/project">Project</NuxtLink>
           <NuxtLink to="/project">Project</NuxtLink>
           <NuxtLink to="/project">Project</NuxtLink>
-          <pre>{{ data }}</pre>
+          <pre v-for="d in data">{{ d }}</pre>
         </div>
       </div>
     </div>
