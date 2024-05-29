@@ -7,8 +7,11 @@ export default defineNuxtConfig({
     }
   },
   css: ['/assets/css/general.css'],
-  modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt', "@nuxthub/core"],
   pinia: {
     autoImports: ['defineStore']
+  },
+  hub: {
+    database: true
   }
 })
