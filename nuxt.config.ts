@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     }
   },
   css: ['/assets/css/general.css'],
-  modules: ['@pinia/nuxt', "@nuxthub/core"],
+  modules: ['@pinia/nuxt'],
   pinia: {
     autoImports: ['defineStore']
   },

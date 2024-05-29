@@ -1,16 +1,16 @@
 import { consola } from 'consola'
 import { migrate } from 'drizzle-orm/d1/migrator'
 
-export default defineNitroPlugin(async () => {
-  if (!import.meta.dev) return
+import * as drizzleConf from '../../drizzle.config'
 
-  onHubReady(async () => {
-    await migrate(useDrizzle(), { migrationsFolder: 'server/database/migrations' })
-      .then(() => {
+export default defineNitroPlugin(async () => {
+    if (!import.meta.dev) return
+
+    await migrate(useDrizzle(), { migrationsFolder: drizzleConf.default.out })
+    .then(() => {
         consola.success('Database migrations done')
-      })
-      .catch((err) => {
+    })
+    .catch((err) => {
         consola.error('Database migrations failed', err)
-      })
-  })
+    })
 })
