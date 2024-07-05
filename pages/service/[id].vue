@@ -6,7 +6,12 @@ const { data: service} = useFetch(`/api/service/${id}`)
 <template>
   <div>Service</div>
 
-  <div>{{ service }}</div>
+  <div class="layout">{{ service }}</div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.layout a{
+  display: flex;
+  justify-content: center;
+}
+</style>

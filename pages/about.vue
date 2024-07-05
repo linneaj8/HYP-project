@@ -8,30 +8,29 @@
     <div><NuxtLink to="/team" class="purpleButton">Our Team</NuxtLink></div>
   </div>
   <div class="infobox">
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
-    non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="subtitle">Our Mission</div>
+    At EmpowerHer, we are dedicated to providing a safe and supportive
+    environment for women who are experiencing difficult situations, including
+    violence, abuse, and family maltreatment. Our mission is to empower women to
+    reclaim their lives through comprehensive support, advocacy, and resources
+    tailored to their unique needs.
+    <div class="subtitle">Our Vision</div>
+    We envision a world where every woman lives free from violence and fear,
+    with the confidence and tools to build a fulfilling and independent life.
+    Through our work, we strive to break the cycle of abuse and create lasting
+    change in the lives of the women we serve and in our community.
+    <div class="subtitle">Who We Are</div>
+    EmpowerHer is a nonprofit organization founded on the principles of
+    compassion, respect, and empowerment. Our team consists of dedicated
+    professionals, volunteers, and advocates who are passionate about making a
+    difference. We believe in the strength and resilience of women and are
+    committed to providing the highest level of care and support.
   </div>
 </template>
 
 <style scoped>
 #image {
-  margin-top: 30px;
+  margin-top: 90px;
   margin-bottom: 40px;
   width: 40%;
   height: auto;
@@ -42,6 +41,13 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+}
+
+.subtitle {
+  font-size: 12pt;
+  margin-top: 15px;
+  margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .purpleButton {
@@ -67,6 +73,7 @@
   margin-top: 50px;
   margin-bottom: 30px;
   padding: 25px;
+  padding-top: 10px;
   min-height: 170px;
 }
 </style>

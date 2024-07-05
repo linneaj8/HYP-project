@@ -34,7 +34,7 @@
   font-size: 30pt;
   display: flex;
   justify-content: center;
-  margin-top: 70px;
+  margin-top: 100px;
 }
 
 .contact {
