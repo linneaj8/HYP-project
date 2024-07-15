@@ -10,7 +10,11 @@ const { data: services } = await useFetch('/api/services')
       <div class="container">
         <NuxtLink to="/project">Projects</NuxtLink>
         <div class="links">
-          <NuxtLink v-for="project in projects" :to="'/project/'+project.id">{{ project }}</NuxtLink>
+            <ul>
+            <li v-for="project in projects">
+              <NuxtLink :to="'/project/'+project.id">{{ project.name }}</NuxtLink>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -18,7 +22,11 @@ const { data: services } = await useFetch('/api/services')
       <div class="container">
         <NuxtLink to="/service">Services</NuxtLink>
         <div class="links">
-          <NuxtLink v-for="service in services" :to="'/service/'+service.id">{{ service }}</NuxtLink>
+          <ul>
+            <li v-for="service in services">
+              <NuxtLink :to="'/service/'+service.id">{{ service.name }}</NuxtLink>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
