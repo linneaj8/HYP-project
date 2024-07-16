@@ -28,10 +28,11 @@ export const services = sqliteTable('services', {
 export const people = sqliteTable('people', {
     id: integer('id').primaryKey({ autoIncrement: true }),
     name: text('fullname').notNull(),
+    experience: integer('experience').notNull(),
     role: text('role').notNull(),
     education: text('education').notNull(),
-    projectID: integer('projectID').references(() => projects.id),
     serviceID: integer('serviceID').references(() => services.id),
+    projectID: integer('projectID').references(() => projects.id),
     description: text('description').notNull(),
     img: text('img').notNull(),
     createdAt: integer('created_at', { mode: 'timestamp' }).notNull()

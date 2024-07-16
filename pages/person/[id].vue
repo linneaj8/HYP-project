@@ -6,44 +6,44 @@ const { data: person} = useFetch(`/api/person/${id}`)
 <template>
   <div class="container">
     <div class="profile">
-      <img src="" alt="Profile Picture">
+      <img :src="person?.img" alt="Profile Picture">
       
     </div>
 
     <div class="info">
       <div class="name">
-        <h1>{{ person.name }}</h1>
+        <h1>{{ person?.name }}</h1>
       </div>
       <div class="top-info">
         <div class="left-block">
           <div class="line">
             <h3>Role:</h3>
-            <a>{{ person.role }}</a>
+            <a>{{ person?.role }}</a>
           </div>
           
           <div class="line">
-            <h3>Work Experience:</h3>
-            <p></p>
+            <h3>Years of Experience:</h3>
+            <p>{{ person?.experience }}</p>
           </div>
           
           <div class="line">
             <h3>Education:</h3>
-            <p>{{ person.education }}</p>
+            <p>{{ person?.education }}</p>
           </div>
         </div>
 
         <div class="right-block">
           <div class="line">
             <span>Projects: </span>
-            <NuxtLink :to="'/project/'+person.projectID">Link</NuxtLink>
+            <NuxtLink :to="'/project/'+person?.projectID">Link</NuxtLink>
           </div>
           <div class="line">
             <span>Services: </span>
-            <NuxtLink :to="'/service/'+person.serviceID">Link</NuxtLink>
+            <NuxtLink :to="'/service/'+person?.serviceID">Link</NuxtLink>
           </div>
         </div>
       </div>
-      <p>{{ person.description }}</p>
+      <p>{{ person?.description }}</p>
     </div>
   </div>
 </template>

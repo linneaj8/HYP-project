@@ -8,7 +8,7 @@ const { data: people } = await useFetch('/api/people')
   <div class="container">
     <NuxtLink v-for="person in people" :to="'/person/'+person.id">
       <div class="team-member">
-        <img src="" alt="Team Member">
+        <img :src="person.img" alt="Team Member">
         <h3>{{ person.name }}</h3>
         <p>{{ person.role }}</p>
         <p>{{ person.education }}</p>
