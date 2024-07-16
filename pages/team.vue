@@ -35,8 +35,10 @@ const { data: people } = await useFetch('/api/people')
 }
 .box-member {
   width: 25%;
-  
   margin-bottom: 50px;
+}
+.box-member a{
+  text-decoration: none;
 }
 .team-member {
   width: 200px;
@@ -46,6 +48,7 @@ const { data: people } = await useFetch('/api/people')
   text-align: center;
   margin: 0 auto;
   padding: 10px;
+  color: white;
 }
 .team-member img {
   width: 150px;
