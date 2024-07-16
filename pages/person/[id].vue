@@ -67,6 +67,7 @@ const { data: person} = useFetch(`/api/person/${id}`)
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .profile h1 {

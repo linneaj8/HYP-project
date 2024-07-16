@@ -6,14 +6,16 @@ const { data: people } = await useFetch('/api/people')
   <div class="title">Our Team</div>
 
   <div class="container">
-    <NuxtLink v-for="person in people" :to="'/person/'+person.id">
-      <div class="team-member">
-        <img :src="person.img" alt="Team Member">
-        <h3>{{ person.name }}</h3>
-        <p>{{ person.role }}</p>
-        <p>{{ person.education }}</p>
-      </div>
-    </NuxtLink>
+    <div v-for="person in people" class="box-member">
+      <NuxtLink :to="'/person/'+person.id">
+        <div class="team-member">
+          <img :src="person.img" alt="Team Member">
+          <h3>{{ person.name }}</h3>
+          <p>{{ person.role }}</p>
+          <p>{{ person.education }}</p>
+        </div>
+      </NuxtLink>
+    </div>
   </div>
 </template>
 
@@ -26,8 +28,15 @@ const { data: people } = await useFetch('/api/people')
 }
 .container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+  justify-content: flex-start;
   margin-top: 20px;
+}
+.box-member {
+  width: 25%;
+  
+  margin-bottom: 50px;
 }
 .team-member {
   width: 200px;
@@ -43,6 +52,7 @@ const { data: people } = await useFetch('/api/people')
   height: 150px;
   border-radius: 50%;
   margin-top: 10px;
+  object-fit: cover;
 }
 .team-member h3 {
   margin-top: 10px;
