@@ -8,7 +8,7 @@ const { data: services } = await useFetch('/api/services')
   <div class="activities">
     <div class="border">
       <div class="container">
-        <NuxtLink to="/project">Projects</NuxtLink>
+        <NuxtLink to="/projects">Projects</NuxtLink>
         <div class="links">
             <ul>
             <li v-for="project in projects">
@@ -20,7 +20,7 @@ const { data: services } = await useFetch('/api/services')
     </div>
     <div class="border">
       <div class="container">
-        <NuxtLink to="/service">Services</NuxtLink>
+        <NuxtLink to="/services">Services</NuxtLink>
         <div class="links">
           <ul>
             <li v-for="service in services">
