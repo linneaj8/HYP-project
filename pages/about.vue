@@ -3,7 +3,7 @@
 <template>
   <div class="aboutUs">
     <div>
-      <img id="image" src="~assets/img/groupImage.png" />
+      <img id="image" src="~assets/img/groupImage.jpg" />
     </div>
     <div><NuxtLink to="/team" class="purpleButton">Our Team</NuxtLink></div>
   </div>
@@ -31,9 +31,10 @@
 <style scoped>
 #image {
   margin-top: 90px;
-  margin-bottom: 40px;
-  width: 40%;
-  height: auto;
+  margin-bottom: -110px;
+  width: 60%;
+  /*height: auto;*/
+  clip-path: inset(0 0 150px 0);
 }
 
 .aboutUs {

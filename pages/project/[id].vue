@@ -44,6 +44,7 @@ const { data: project} = useFetch(`/api/project/${id}`)
   width: 150px;
   height: 150px;
   border-radius: 50%;
+  object-fit: cover;
 }
 
 .profile h1 {
