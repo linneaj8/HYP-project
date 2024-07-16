@@ -6,21 +6,21 @@ const { data: service} = useFetch(`/api/service/${id}`)
 <template>
   <div class="container">
     <div class="profile">
-      <img :src="service?.img" alt="Service Picture">
+      <img :src="service?.service?.img" alt="Service Picture">
       
     </div>
 
     <div class="info">
       <div class="name">
-        <h1>{{ service?.name }}</h1>
+        <h1>{{ service?.service?.name }}</h1>
       </div>
       <div class="top-info">
         <div class="line">
-          <span>Service Leader: </span>
-          <NuxtLink :to="'/person/'+service?.id">Link (to fix)</NuxtLink>
+          <span>Participants: </span>
+          <NuxtLink v-for="person in service?.people" :to="'/person/'+person.id">{{ person.name }}</NuxtLink>
         </div>
       </div>
-      <p>{{ service?.description }}</p>
+      <p>{{ service?.service?.description }}</p>
     </div>
   </div>
 </template>
