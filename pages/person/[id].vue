@@ -74,9 +74,14 @@ const { data: person} = useFetch(`/api/person/${id}`)
 }
 
 .info {
-  background-color: #BFBFBF;
-  padding: 20px;
-  border-radius: 5px;
+  background-color: #bfbfbf;
+  border-radius: 15px;
+  margin: 100px;
+  margin-top: 50px;
+  margin-bottom: 30px;
+  padding: 25px;
+  padding-top: 10px;
+  min-height: 170px;
 }
 
 .top-info{
