@@ -13,6 +13,7 @@
     "db:studio": "drizzle-kit studio --port 3000 --host 0.0.0.0 --verbose"
   },
   "dependencies": {
+    "@hebilicious/form-actions-nuxt": "^0.3.0",
     "@libsql/client": "^0.5.6",
     "@pinia/nuxt": "^0.5.1",
     "drizzle-orm": "^0.29.5",

@@ -7,7 +7,7 @@ export default defineNuxtConfig({
     }
   },
   css: ['/assets/css/general.css'],
-  modules: ['@pinia/nuxt'],
+  modules: ['@pinia/nuxt', '@hebilicious/form-actions-nuxt'],
   pinia: {
     autoImports: ['defineStore']
   },

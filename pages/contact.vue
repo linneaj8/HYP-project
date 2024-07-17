@@ -1,4 +1,6 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const { enhance, data } = await useFormAction()
+</script>
 
 <template>
   <div class="title">Contact Us</div>
@@ -6,25 +8,31 @@
     E-mail: example@email.com | Phone: +39 123 456 7890
     <br />Address: example street, Milan, Italy
   </div>
-  <form>
+  <div v-if="data.formResponse?.sent" class="popup">
+    <div class="popup-content">
+      <p>Your request has been sent successfully!</p>
+      <p>We will contact you as soon as possible.</p>
+    </div>
+  </div>
+  <form v-if="!data.formResponse?.sent" v-enhance="enhance" method="POST">
     <div>
       <label for="name">Full name*</label>
-      <input type="text" id="name" placeholder="Name" />
+      <input type="text" id="name" name="name" placeholder="Name" required/>
     </div>
     <div>
       <label for="mail">E-mail address*</label>
-      <input type="email" id="mail" placeholder="E-mail" />
+      <input type="email" id="mail" name="mail" placeholder="E-mail" required/>
     </div>
     <div>
       <label for="subject">Subject*</label>
-      <input type="text" id="subject" placeholder="Subject" />
+      <input type="text" id="subject" name="subject" placeholder="Subject" required/>
     </div>
     <div id="message-div">
       <label for="message">Message*</label>
-      <textarea id="message" placeholder="Write your message here"></textarea>
+      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
     </div>
     <div>
-      <button class="purpleButton">Send</button>
+      <button type="submit" class="purpleButton">Send</button>
     </div>
   </form>
 </template>
@@ -97,5 +105,20 @@ form label {
 
 .purpleButton:hover {
   text-decoration: underline;
+}
+
+.popup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.popup-content {
+  background-color: #3B9489;
+  padding: 20px; 
+  border-radius: 10px;
+  text-align: center;
+  color: white;
 }
 </style>
