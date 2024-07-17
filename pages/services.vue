@@ -28,7 +28,6 @@ const { data: services } = await useFetch('/api/services')
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  justify-content: flex-start;
   margin-top: 20px;
 }
 .box-services {

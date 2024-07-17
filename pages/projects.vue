@@ -28,7 +28,6 @@ const { data: projects } = await useFetch('/api/projects')
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  justify-content: flex-start;
   margin-top: 20px;
 }
 .box-project {

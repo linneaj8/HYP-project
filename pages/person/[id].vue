@@ -51,12 +51,10 @@ const { data: person} = useFetch(`/api/person/${id}`)
 <style scoped>
 .container {
   margin-top: 100px;
-  /*background-color: #f1f1f1;*/
   padding: 10px;
 }
 
 .profile {
-  /*background-color: #fff;*/
   padding: 20px;
   border-radius: 5px;
   margin-bottom: 20px;
