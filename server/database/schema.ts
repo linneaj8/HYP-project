@@ -33,6 +33,8 @@ export const people = sqliteTable('people', {
     education: text('education').notNull(),
     serviceID: integer('serviceID').references(() => services.id),
     projectID: integer('projectID').references(() => projects.id),
+    serviceLeader: integer('serviceLeader').notNull(),
+    projectLeader: integer('projectLeader').notNull(),
     description: text('description').notNull(),
     img: text('img').notNull(),
     createdAt: integer('created_at', { mode: 'timestamp' }).notNull()

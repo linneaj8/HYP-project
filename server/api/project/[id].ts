@@ -5,7 +5,7 @@ export default defineEventHandler(async (event) => {
 
     let project = {
         "project": _project[0],
-        "people": await useDrizzle().select().from(tables.people).where(eq(tables.people.projectID, event.context.params.id))
+        "people": await useDrizzle().select().from(tables.people).where(and(eq(tables.people.projectID, event.context.params.id), eq(tables.people.projectLeader, 1)))
     }
     return project;
 })

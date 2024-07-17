@@ -16,7 +16,7 @@ const { data: service} = useFetch(`/api/service/${id}`)
       </div>
       <div class="top-info">
         <div class="line">
-          <span>Participants: </span>
+          <span>Service Leader: </span>
           <NuxtLink v-for="person in service?.people" :to="'/person/'+person.id">{{ person.name }}</NuxtLink>
         </div>
       </div>

@@ -3,7 +3,7 @@ export default defineEventHandler(async (event) => {
     
     let service = {
         "service": _service[0],
-        "people": await useDrizzle().select().from(tables.people).where(eq(tables.people.serviceID, event.context.params.id))
+        "people": await useDrizzle().select().from(tables.people).where(and(eq(tables.people.serviceID, event.context.params.id), eq(tables.people.serviceLeader, 1)))
     }
     return service;
 })
